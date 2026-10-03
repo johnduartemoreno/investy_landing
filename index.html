@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investy — Aprendé a invertir practicando</title>
+<meta name="description" content="Investy es un simulador de inversión: practicás con un portafolio sin dinero real, seguís tus metas y entendés qué hay detrás de cada activo. Hecho en Colombia.">
+<meta property="og:title" content="Investy — Aprendé a invertir practicando">
+<meta property="og:description" content="Un simulador para practicar inversión sin dinero real. Hecho en Colombia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://investyapp.com">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦉</text></svg>">
+<style>
+  :root{
+    --bg:#ffffff; --surface:#f6f6f9; --border:#e4e4ec;
+    --text:#17171f; --muted:#5b5b6b; --accent:#6c4df6; --accent-soft:#efeaff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f0f13; --surface:#1a1a20; --border:#2a2a34;
+      --text:#f2f2f6; --muted:#a2a2b4; --accent:#9b84ff; --accent-soft:#241f3d;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f0f13; --surface:#1a1a20; --border:#2a2a34;
+    --text:#f2f2f6; --muted:#a2a2b4; --accent:#9b84ff; --accent-soft:#241f3d;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 16px}
+  header{padding:56px 0 8px}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-.02em; font-size:1.1rem}
+  .logo span{font-size:1.5rem; line-height:1}
+  h1{font-size:clamp(1.9rem,6vw,2.7rem); line-height:1.15; letter-spacing:-.03em; margin:28px 0 14px}
+  .lead{font-size:1.12rem; color:var(--muted); margin:0 0 28px}
+  .badge{
+    display:inline-block; background:var(--accent-soft); color:var(--accent);
+    border-radius:999px; padding:5px 13px; font-size:.82rem; font-weight:600;
+  }
+  section{padding:30px 0; border-top:1px solid var(--border)}
+  h2{font-size:1.18rem; letter-spacing:-.01em; margin:0 0 14px}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:14px 0}
+  .card h3{margin:0 0 6px; font-size:1rem}
+  .card p{margin:0; color:var(--muted); font-size:.96rem}
+  ul{padding-left:20px; color:var(--muted)} li{margin:7px 0}
+  a{color:var(--accent)}
+  .legal{font-size:.85rem; color:var(--muted)}
+  .legal strong{color:var(--text)}
+  footer{padding:34px 0 60px; border-top:1px solid var(--border); color:var(--muted); font-size:.88rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo"><span>🦉</span> Investy</div>
+    <h1>Aprendé a invertir practicando, sin poner plata.</h1>
+    <p class="lead">
+      Investy es un simulador. Armás un portafolio con dinero ficticio, le ponés metas,
+      y la app te muestra qué pasa con lo que elegiste y por qué.
+    </p>
+    <span class="badge">En desarrollo · Colombia</span>
+  </header>
+
+  <section>
+    <h2>Qué es hoy</h2>
+    <p>
+      Hoy todo es simulado: <strong>no hay dinero real, ni cuentas de inversión, ni activos bajo custodia</strong>.
+      Es una herramienta para entender cómo se comporta un portafolio antes de arriesgar nada.
+    </p>
+    <div class="card">
+      <h3>Tu portafolio, ordenado</h3>
+      <p>Qué tenés, cuánto pesa cada cosa y cómo se movió desde que lo compraste.</p>
+    </div>
+    <div class="card">
+      <h3>Metas con fecha</h3>
+      <p>Un objetivo con plazo y monto, para mirar el progreso en vez de mirar el precio todos los días.</p>
+    </div>
+    <div class="card">
+      <h3>Owl, que explica</h3>
+      <p>
+        Owl propone activos para practicar en el simulador y explica cada uno: qué es,
+        cuánto se mueve y qué parte del portafolio representaría. Vos decidís; la app no ejecuta nada sola.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Qué no es</h2>
+    <ul>
+      <li><strong>No presta asesoría de inversión ni tiene asesores.</strong></li>
+      <li>No administra ni custodia dinero ni activos de nadie.</li>
+      <li>No promete rentabilidades. Cualquier proyección que veas es hipotética y nadie la garantiza.</li>
+      <li>No es una entidad vigilada por la Superintendencia Financiera de Colombia.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>En qué anda</h2>
+    <p class="legal">
+      Investy está en desarrollo y todavía no está publicada en las tiendas. La lista de espera
+      está cerrada mientras preparamos la próxima versión. Si querés que te avisemos cuando abra,
+      escribinos y te anotamos.
+    </p>
+    <div class="card">
+      <h3>Contacto</h3>
+      <p><a href="mailto:support@investyapp.com">support@investyapp.com</a> · Barichara, Santander, Colombia</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Aviso legal</h2>
+    <p class="legal">
+      El contenido de la presente comunicación o mensaje no constituye una recomendación profesional
+      para realizar inversiones en los términos del artículo 2.40.1.1.2 del Decreto 2555 de 2010
+      o las normas que lo modifiquen, sustituyan o complementen.
+    </p>
+    <p class="legal">
+      Los ejemplos y proyecciones que aparezcan en la aplicación son hipotéticos y no constituyen
+      promesa ni garantía de rendimiento. Invertir implica riesgo de pérdida.
+    </p>
+  </section>
+
+  <footer>
+    © <span id="y">2026</span> Investy · Hecho en Colombia
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+</div>
+</body>
+</html>
