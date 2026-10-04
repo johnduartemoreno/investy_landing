@@ -1,7 +1,5 @@
-# Worker de solo activos estáticos: no hay código, sólo la página.
-# Cloudflare sirve `public/` directamente; por eso no hay `main`.
+# Configuración de Cloudflare Pages. No hay código ni comando de build:
+# `public/` se sirve tal cual.
 name = "investy-landing"
 compatibility_date = "2026-10-03"
-
-[assets]
-directory = "./public"
+pages_build_output_dir = "./public"

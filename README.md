@@ -27,10 +27,10 @@ reemitir el PDF de campaña (B98, B158).
 
 ## Publicación
 
-**Cloudflare Workers con activos estáticos** (no Pages), conectado a este
-repositorio. `wrangler.toml` declara un Worker *sin código*: sólo `[assets]`
-apuntando a `public/`, que es lo que Cloudflare sirve. Por eso no hay `main` ni
-comando de build, y el deploy es `npx wrangler deploy`.
+**Cloudflare Pages**, conectado a este
+repositorio. `wrangler.toml` sólo declara `pages_build_output_dir`:
+`public/` se sirve tal cual. Por eso no hay
+comando de build ni framework preset (queda en *None*).
 
 El dominio ya usa los nameservers de Cloudflare (`aron.ns.cloudflare.com`,
 `nicolas.ns.cloudflare.com`). Cada push a `main` republica.
