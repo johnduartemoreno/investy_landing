@@ -27,16 +27,24 @@ reemitir el PDF de campaña (B98, B158).
 
 ## Publicación
 
-Cloudflare Pages, conectado a este repositorio; el dominio ya usa los nameservers
-de Cloudflare (`aron.ns.cloudflare.com`, `nicolas.ns.cloudflare.com`). Al
-publicarlo hay que **quitar la Redirect Rule que manda `investyapp.com` al
-formulario de Tally** (B166) y apuntar el dominio al proyecto de Pages.
+**Cloudflare Workers con activos estáticos** (no Pages), conectado a este
+repositorio. `wrangler.toml` declara un Worker *sin código*: sólo `[assets]`
+apuntando a `public/`, que es lo que Cloudflare sirve. Por eso no hay `main` ni
+comando de build, y el deploy es `npx wrangler deploy`.
 
-Cada push a `main` republica. No hay comando de build: *framework preset* = None,
-directorio de salida = la raíz.
+El dominio ya usa los nameservers de Cloudflare (`aron.ns.cloudflare.com`,
+`nicolas.ns.cloudflare.com`). Cada push a `main` republica.
+
+### Lo que hay que sacar al publicar
+
+Existe un Worker viejo, **`investyapp-redirect`**, que manda `investyapp.com` y
+`www.investyapp.com` al formulario de Tally. **Las rutas de un Worker se evalúan
+antes que este sitio**, así que mientras existan, el dominio sigue yendo al
+formulario (B166) por más que el sitio esté publicado. Hay que quitarle las rutas
+—o borrarlo— en *Settings → Domains & Routes*.
 
 ## Verificar antes de publicar
 
 ```bash
-python3 -m http.server 8000   # y abrir http://localhost:8000
+cd public && python3 -m http.server 8000   # y abrir http://localhost:8000
 ```

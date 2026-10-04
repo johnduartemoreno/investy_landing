@@ -1,0 +1,7 @@
+# Worker de solo activos estáticos: no hay código, sólo la página.
+# Cloudflare sirve `public/` directamente; por eso no hay `main`.
+name = "investy-landing"
+compatibility_date = "2026-10-03"
+
+[assets]
+directory = "./public"
